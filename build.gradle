@@ -4,6 +4,8 @@ group 'JMarkPad'
 apply plugin: 'java'
 apply plugin: 'idea'
 
+sourceCompatibility = 1.9
+
 buildscript {
     dependencies {
         classpath group: 'de.dynamicfiles.projects.gradle.plugins', name: 'javafx-gradle-plugin', version: '8.8.2'
@@ -15,10 +17,11 @@ buildscript {
     }
 }
 repositories {
-
     jcenter()
     mavenCentral()
-
+    flatDir {
+        dirs 'libs'
+    }
 }
 
 dependencies {
@@ -26,10 +29,12 @@ dependencies {
     // Use JUnit test framework
     testCompile 'junit:junit:4.12'
 
+    //compile group: 'libs', name: 'txtmark', version: '0.13'
+    compile group: 'libs', name: 'jfoenix', version: '9.0.1'
     // https://mvnrepository.com/artifact/com.github.rjeschke/txtmark
-    compile group: 'com.github.rjeschke', name: 'txtmark', version: '0.13'
+    //compile group: 'com.github.rjeschke', name: 'txtmark', version: '0.13'
     // https://mvnrepository.com/artifact/com.jfoenix/jfoenix
-    compile group: 'com.jfoenix', name: 'jfoenix', version: '8.0.1'
+    //compile group: 'com.jfoenix', name: 'jfoenix', version: '9.0.1'
 
 }
 sourceSets {
@@ -64,4 +69,34 @@ jfx {
 
     // minimal requirement for jfxNative-task
     vendor = 'Mayuso'
+}
+
+
+task copyLibs(type: Copy) {
+    from configurations.runtime
+    into 'build/deps'
+}
+def java_home = System.getenv('JAVA_HOME')
+task link(type: Exec) {
+    //dependsOn 'clean'
+    //dependsOn 'jar'
+
+    workingDir 'build'
+
+    ext.appModulePaths = configurations.compile*.absolutePath.join(';')
+    ext.appModulePaths = ext.appModulePaths + "deps";
+    executable "${java_home}/bin/jlink"
+	args = ['--module-path', (["$java_home/jmods"] + ext.appModulePaths).grep().join("${File.pathSeparatorChar}"),
+            '--add-modules', 'JMarkPad',
+            '--launcher', 'JMarkPad=JMarkPad/ui.UI',
+            '--output', 'dist',
+            '--compress=2',
+            '--strip-debug',
+            '--no-header-files',
+            '--no-man-pages'
+    ]
+    logger.lifecycle commandLine.join('        ')
+
+
+
 }

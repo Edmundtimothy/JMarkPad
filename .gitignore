@@ -36,3 +36,4 @@ bin/
 out/
 
 *.xml
+*.APP_JAR

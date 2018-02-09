@@ -23,10 +23,10 @@ public class OptionsPane extends StackPane {
     public OptionsPane(UI ui) {
 
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/panes/OptionsPane.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/ui/fxml/panes/OptionsPane.fxml"));
             fxmlLoader.setController(this);
             Parent root = (Region) fxmlLoader.load();
-            getStylesheets().add("/css/JMarkPad.css");
+            getStylesheets().add("/ui/css/JMarkPad.css");
 
             addListeners(ui);
 

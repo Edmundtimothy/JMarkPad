@@ -1,12 +1,12 @@
 package ui;
 
-import com.github.rjeschke.txtmark.Processor;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTabPane;
 import com.jfoenix.controls.JFXTextArea;
 import javafx.scene.control.*;
 import javafx.scene.web.WebView;
 import javafx.stage.Stage;
+import txtmark.Processor;
 import utilities.Utilities;
 
 import java.io.File;

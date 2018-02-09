@@ -49,7 +49,7 @@ public class UI extends Application implements Initializable {
         this.stage = stage;
 
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/JMarkPad.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("fxml/JMarkPad.fxml"));
             fxmlLoader.setController(this);
             Parent root = (Region) fxmlLoader.load();
 
@@ -58,7 +58,7 @@ public class UI extends Application implements Initializable {
             decorator.setCustomMaximize(true);
             Scene scene = new Scene(decorator, 800, 600);
 
-            scene.getStylesheets().add("/css/JMarkPad.css");
+            scene.getStylesheets().add(this.getClass().getResource("css/JMarkPad.css").toExternalForm());
             stage.initStyle(StageStyle.UNDECORATED);
             stage.setResizable(true);
 
