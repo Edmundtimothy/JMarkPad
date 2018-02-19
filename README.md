@@ -4,7 +4,6 @@ Java minimalistic text editor
 ![](otherResources/readmeGif.gif)
 
 
-Develop branch status: [![Build Status](https://travis-ci.org/mayuso/JMarkPad.svg?branch=develop)](https://travis-ci.org/mayuso/JMarkPad)
 ## General information 
 
 ### Installing
@@ -18,12 +17,12 @@ To use JMarkPad you only need to download and double click on the executable:
 
 ### Roadmap
 
-We are constantly trying to improve JMarkPad, you can see the known bugs and planned enhancements on our [issues list](https://github.com/mayuso/JMarkPad/issues).
+We are constantly trying to improve JMarkPad, you can see the known bugs and planned enhancements on our [issues list](https://github.com/Edmundtimothy/JMarkPad/issues).
 
 ## Development
 
 ### Build status 
-Develop branch: [![Build Status](https://travis-ci.org/mayuso/JMarkPad.svg?branch=develop)](https://travis-ci.org/mayuso/JMarkPad)
+Develop branch: [![Build Status](https://github.com/Edmundtimothy/JMarkPad/branches)](https://github.com/Edmundtimothy/JMarkPad/branches)
 
 ### Versioning
 
@@ -31,9 +30,7 @@ We use [Semantic Versioning 2.0.0](http://semver.org/) for versioning. For the v
 
 ### Authors
 
-* **Mikel Ayuso** - *Initial work* - [Mayuso](https://github.com/mayuso)
-
-See also the list of [contributors](https://github.com/mayuso/JMarkPad/graphs/contributors) who participated in this project.
+* **Edmundtimothy** - *Initial work* - [Edmundtimothy](https://github.com/Edmundtimothy)
 
 ### License
 
