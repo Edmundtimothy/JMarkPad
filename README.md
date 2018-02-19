@@ -22,7 +22,7 @@ We are constantly trying to improve JMarkPad, you can see the known bugs and pla
 ## Development
 
 ### Build status 
-Develop branch: [![Build Status](https://github.com/Edmundtimothy/JMarkPad/branches)](https://github.com/Edmundtimothy/JMarkPad/branches)
+Develop branch: [![Build Status](https://travis-ci.org/mayuso/JMarkPad.svg?branch=develop)](https://github.com/Edmundtimothy/JMarkPad/branches)
 
 ### Versioning
 
