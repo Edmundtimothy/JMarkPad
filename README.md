@@ -30,7 +30,7 @@ We use [Semantic Versioning 2.0.0](http://semver.org/) for versioning. For the v
 
 ### Authors
 
-* **Edmundtimothy** - *Initial work* - [Edmundtimothy](https://github.com/Edmundtimothy)
+* **Edmund Timothy** - *Initial work* - [Edmund Timothy](https://github.com/Edmundtimothy)
 
 ### License
 
